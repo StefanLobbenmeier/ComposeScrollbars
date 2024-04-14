@@ -9,6 +9,7 @@
 )
 
 plugins {
+    id("root.publication")
     alias(libs.plugins.ksp.gradle.plugin)
 }
 

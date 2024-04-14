@@ -14,9 +14,20 @@ compose_bom_version = "2023.10.01"
 compose_activity_version = "1.8.1"
 compose_color_picker_version = "0.7.0"
 
+# KMM
+agp = "8.0.2"
+kotlin = "1.9.0"
+nexus-publish = "2.0.0-rc-1"
+android-minSdk = "24"
+android-compileSdk = "33"
+
 [plugins]
 
 ksp_gradle_plugin = { id = "com.google.devtools.ksp", version.ref = "ksp_version" }
+
+# KMM
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 
 [libraries]
 
@@ -35,6 +46,10 @@ compose_ui_util = { module = "androidx.compose.ui:ui-util" }
 compose_activity = { module = "androidx.activity:activity-compose", version.ref = "compose_activity_version" }
 compose_color_picker = { module = "com.godaddy.android.colorpicker:compose-color-picker", version.ref = "compose_color_picker_version" }
 debug_compose_tooling = { module = "androidx.compose.ui:ui-tooling" }
+
+# KMM
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+nexus-publish = { module = "io.github.gradle-nexus.publish-plugin:io.github.gradle-nexus.publish-plugin.gradle.plugin", version.ref = "nexus-publish" }
 
 [bundles]
 
